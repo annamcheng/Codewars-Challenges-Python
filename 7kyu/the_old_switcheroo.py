@@ -26,21 +26,6 @@ Syntax: list_name.index(element, start, end)
         start (optional) - position where search begins
         end (optional) - position where search ends
 """
-# vowels = ('a', 'e', 'i', 'o', 'u','A','E','I','O','U')
-# def vowel_2_index(string):
-#     for idx, char in enumerate(string):
-#         if char in 'aeiouAEIOU':
-#             idx = str(idx)
-#             print(string.replace(char, idx))
-#
-#     # for char in string:
-#     #     if char in vowels:
-#     #         new_string = string.replace(char,str(idx))
-#     # return new_string
-#
-# print(vowel_2_index('this is my string'))
-# print(vowel_2_index('Codewars is the best site in the world'))
-# print(vowel_2_index('Tomorrow is going to be raining'))
 
 def vowel(strng):
     result = []

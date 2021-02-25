@@ -1,6 +1,5 @@
 """
 Spoonerize Me
-https://www.codewars.com/kata/56b8903933dbe5831e000c76/train/python
 
 A spoonerism is a spoken phrase in which the first letters of two of the words are swapped around, often with amusing results.
 In its most basic form a spoonerism is a two word phrase in which only the first letters of each word are swapped:
@@ -22,3 +21,22 @@ print(spoonerize("jelly beans"))
 print(spoonerize("pop corn"))
 print(spoonerize('rwxb gccdwkkzsj'))
 
+# # CODEWARS SOLUTION
+# def spoonerize(words):
+#     # split the words into two words
+#     # ['word1', 'word2']
+#     lst = words.split(" ")
+#     # assign to new var, put into list so we can grab the index
+#     # ['w', 'o', 'r', 'd', '1']
+#     a = list(lst[0])
+#     b = list(lst[1])
+#     # reassign word1[0],word2[0] = word2[0],word1[0]
+#     a[0],b[0] = b[0],a[0]
+#     # join a and b back into a string
+#     return "".join(a) + " " + "".join(b)
+#
+# print(spoonerize("nit picking"))
+#
+# def spoonerize(words):
+#     a, b = words.split()
+#     return '{}{} {}{}'.format(b[0], a[1:], a[0], b[1:])

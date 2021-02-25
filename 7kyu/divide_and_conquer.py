@@ -18,11 +18,9 @@ Return as a number.
 # Syntax: sum(iterable, start); iterable list, tuple, dict.
 
 def div_con(x):
-    # your code here
     integer = [num for num in x if isinstance(num, int)]
     str_num = [int(char) for char in x if isinstance(char, str)]
     return sum(integer) - sum(str_num)
-
 
 print(div_con([9, 3, '7', '3']))
 print(div_con(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
