@@ -27,13 +27,22 @@ Syntax: list_name.index(element, start, end)
         end (optional) - position where search ends
 """
 
-def vowel(strng):
+def vowel_2_index(string):
     result = []
-    for index in range(len(strng)):
-        if strng[index] in 'aeiouAEIOU':
+    for index in range(len(string)):
+        if string[index] in 'aeiouAEIOU':
             result.append(str(index+1))
         else:
-            result.append(strng[index])
+            result.append(string[index])
     return ''.join(result)
 
 print(vowel('this is my string'))
+
+# CODEWARS SOLUTIONS
+# def vowel_2_index(string):
+#     vowels = 'aeiouAEIOU'
+#     return ''.join(x if x not in vowels else str(n + 1) for n,x in enumerate(string))
+
+# import re
+# def vowel_2_index(string):
+#     return re.sub("[aeiou]",lambda m:str(m.end()),string,0,re.I)

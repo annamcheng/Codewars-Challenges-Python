@@ -24,3 +24,13 @@ print(switcheroo("abc"))
 # bac
 print(switcheroo('aaabcccbaaa'))
 # bbbacccabbb
+
+# # CODEWAR SOLUTIONS
+# def switcheroo(string):
+#     return ''.join({'a':'b', 'b':'a'}.get(c, c) for c in string)
+
+# def switcheroo(string):
+#     return ''.join( [ 'a' if s=='b' else 'b' if s=='a' else s for s in string ] )
+
+# def switcheroo(s):
+#     return s.translate(str.maketrans('ab','ba'))
