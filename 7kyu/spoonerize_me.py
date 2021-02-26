@@ -40,3 +40,7 @@ print(spoonerize('rwxb gccdwkkzsj'))
 # def spoonerize(words):
 #     a, b = words.split()
 #     return '{}{} {}{}'.format(b[0], a[1:], a[0], b[1:])
+
+# import re
+# def spoonerize(s):
+#     return re.sub("(.)(.+) (.)(.+)", r"\3\2 \1\4", s)
