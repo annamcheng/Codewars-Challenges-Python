@@ -19,7 +19,6 @@ def replicate(times, number):
             replicate(times-1, result.append(number))
     return result
 
-
 print(replicate(3,5))
 # [5,5,5]
 print(replicate(5,1))
