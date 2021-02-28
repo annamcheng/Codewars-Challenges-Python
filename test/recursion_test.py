@@ -1,13 +1,13 @@
-# def mel(n, m):
-#     if n == 1:
-#         return m
-#     else:
-#         return m + mel(n-1, m)
-#
-# n = 4
-# m = 5
-#
-# print(mel(n, m))
+def mel(n, m):
+    if n == 1:
+        return m
+    else:
+        return m + mel(n-1, m)
+
+n = 4
+m = 5
+
+print(mel(n, m))
 
 x = 1234
 def digit_num(x):
@@ -29,3 +29,5 @@ def reverse(x):
                 #        3 * (10**2) + reverse(12)       # 300 + 21 = 321
                 #             2 * (10**1) + reverse(1)   # 20 + 1 = 21
 print(reverse(x))
+
+print()

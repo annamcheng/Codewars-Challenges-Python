@@ -11,15 +11,32 @@ NOTE: All input strings will contain only two words. Spoonerisms can be more com
 # split the string
 # grab the first character of the second string + the first word starting at 1st index using index slicing
 # grab the first character of the first string + the second word starting at 1st index
-def spoonerize(words):
-    newlist = [x for x in words.split()]
-    return f"{newlist[1][:1] + newlist[0][1:]} {newlist[0][:1] + newlist[1][1:]}"
 
-print(spoonerize("nit picking"))
-print(spoonerize("wedding bells"))
-print(spoonerize("jelly beans"))
-print(spoonerize("pop corn"))
-print(spoonerize('rwxb gccdwkkzsj'))
+# def spoonerize(words):
+#     newlist = [x for x in words.split()]
+#     return f"{newlist[1][:1] + newlist[0][1:]} {newlist[0][:1] + newlist[1][1:]}"
+#
+# print(spoonerize("nit picking"))
+# print(spoonerize("wedding bells"))
+# print(spoonerize("jelly beans"))
+# print(spoonerize("pop corn"))
+# print(spoonerize('rwxb gccdwkkzsj'))
+
+def spoonerize2(words):
+    x = words.split()
+    # ['nit', 'picking']
+    return " ".join([x[1-y][0] + x[y][1:] for y in range(len(x))])
+
+# x[1][0] + x[0][1:]
+# x[0][0] + x[1][1:]
+
+print(spoonerize2("nit picking"))
+
+
+
+
+
+
 
 # # CODEWARS SOLUTION
 # def spoonerize(words):

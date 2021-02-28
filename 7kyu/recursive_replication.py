@@ -9,20 +9,30 @@ If the times argument is negative,return an empty array.
 
 As tempting as it may seem, do not use loops to solve this problem.
 """
+# # FOR LOOP SOLUTION
+# def replicate(times, number):
+#     result = []
+#     if times < 0:
+#         return []
+#     else:
+#         for i in range(times):
+#             result.append(number)
+#     return result
 
-def replicate(times, number):
-    result = []
-    if times < 0:
+# RECURSION SOLUTION
+def replicate2(times, number):
+    if times <= 0:
         return []
     else:
-        for i in range(times):
-            replicate(times-1, result.append(number))
-    return result
+        return [number] + replicate2(times-1, number)
+               # 5      + rep2(2, 5)
+                        # 5      + rep2(1, 5)
+                                 # 5 + rep2(0,5)
+# print(replicate(3,5))
+# # [5,5,5]
+# print(replicate(-1,12))
+# # []
 
-print(replicate(3,5))
-# [5,5,5]
-print(replicate(5,1))
+print(replicate2(5,1))
 # [1, 1, 1, 1, 1]
-print(replicate(-1,12))
-# []
-
+print(replicate2(3,5))

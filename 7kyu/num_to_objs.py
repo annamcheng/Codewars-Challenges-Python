@@ -16,27 +16,18 @@ All inputs will be arrays of numbers. All character codes are valid lower case l
 # How do you convert a list into dict? Use dict comprehension
 # How do you split a dict into a list of dicts? Use list comprehension
 
-# def num_obj(s):
-#     chars = []
-#     for num in s:
-#         chars.append(chr(num))
-#     mydict = dict(zip(s, chars))
-#     return [{str(k): v} for (k, v) in mydict.items()]
+def num_obj(s):
+    chars = []
+    for num in s:
+        chars.append(chr(num))
+    mydict = dict(zip(s, chars))
+    return [{str(k): v} for (k, v) in mydict.items()]
 
-# def num_obj(s):
-#     chars = []
-#     mylist = [str(letters) for letters in s]
-#     for num in s:
-#         chars.append(chr(num))
-#     num = min(len(mylist), len(chars))
-#     result = [None] * (num * 2)
-#     result[::2] = mylist[:num]
-#     result[1::2] = chars[:num]
-#     result.extend(mylist[num:])
-#     result.extend(chars[num:])
-#     print(result)
-#     res_dct = {result[i]: result[i + 1] for i in range(0, len(result), 2)}
-#     print(res_dct)
-print(num_obj([118,117,120]))
-print(num_obj([113,113,113]))
+def num_obj2(s):
+    return [{str(num): chr(num)} for num in s]
+
+# print(num_obj([118,117,120]))
+# print(num_obj([113,113,113]))
 # [{'113': 'q'}, {'113': 'q'}, {'113': 'q'}]
+
+print(num_obj2([113,113,113]))
