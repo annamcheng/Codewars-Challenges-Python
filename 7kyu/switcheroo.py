@@ -10,27 +10,16 @@ Example:
 'aabacbaa' --> 'bbabcabb'
 """
 def switcheroo(string):
-    result = []
-    newlist = [letter for letter in string]
-    for i in range(len(newlist)):
-        if newlist[i] == 'a':
-            result.append('b')
-        elif newlist[i] == 'b':
-            result.append('a')
-        else:
-            result.append(newlist[i])
-    return "".join(result)
+    return "".join(['a' if s == 'b' else 'b' if s == 'a' else s for s in string])
 print(switcheroo("abc"))
 # bac
 print(switcheroo('aaabcccbaaa'))
 # bbbacccabbb
 
+
 # # CODEWAR SOLUTIONS
 # def switcheroo(string):
 #     return ''.join({'a':'b', 'b':'a'}.get(c, c) for c in string)
-
-# def switcheroo(string):
-#     return ''.join( [ 'a' if s=='b' else 'b' if s=='a' else s for s in string ] )
 
 # def switcheroo(s):
 #     return s.translate(str.maketrans('ab','ba'))
