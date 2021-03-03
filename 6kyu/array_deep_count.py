@@ -16,16 +16,19 @@ deepCount([1, 2, [3, 4, [5]]]);
 The input will always be an array.
 
 """
-def deep_count(a):
-    pass
 
-print(deep_count([]))
-# 0
-print(deep_count([1, 2, 3]))
-# 3
+def deep_count(a):
+    if a == []:
+        return 0
+    else:
+
+# print(deep_count([]))
+# # 0
+# print(deep_count([1, 2, 3]))
+# # 3
 print(deep_count(["x", "y", ["z"]]))
 # 4
 print(deep_count([1, 2, [3, 4, [5]]]))
-# 7
+# # 7
 print(deep_count([[[[[[[[[]]]]]]]]]))
-# 8
+# # 8
