@@ -16,19 +16,28 @@ deepCount([1, 2, [3, 4, [5]]]);
 The input will always be an array.
 
 """
+# Python extend() method adds all elements of iterable to end of list
+# Syntax: list.extend(iterable)
 
 def deep_count(a):
-    if a == []:
+    lst = []
+    if not a:
         return 0
     else:
+        for el in a:
+            if isinstance(el, list):
+                lst.extend(deep_count(el))
+            else:
+                lst.append(el)
+        return len(lst)
 
-# print(deep_count([]))
+print(deep_count([]))
 # # 0
-# print(deep_count([1, 2, 3]))
+print(deep_count([1, 2, 3]))
 # # 3
 print(deep_count(["x", "y", ["z"]]))
 # 4
 print(deep_count([1, 2, [3, 4, [5]]]))
-# # 7
-print(deep_count([[[[[[[[[]]]]]]]]]))
-# # 8
+# 7
+# print(deep_count([[[[[[[[[]]]]]]]]]))
+# 8
