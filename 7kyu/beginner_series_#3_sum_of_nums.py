@@ -16,7 +16,7 @@ get_sum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
 """
 
 def get_sum(a,b):
-    return a if a == b else sum(list(range(min(a,b), max(a,b)+1)))
+    return sum(range(min(a,b), max(a,b)+1))
 
 print(get_sum(-1,0))
 print(get_sum(2,-1))
