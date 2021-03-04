@@ -20,6 +20,6 @@ def reduce_fraction(fraction):
     return num//d, denom//d
 
 print(reduce_fraction((60, 20)))
+# (3,1)
 print(reduce_fraction((80, 120)))
-
-print(math.gcd)
+# (2,3)
