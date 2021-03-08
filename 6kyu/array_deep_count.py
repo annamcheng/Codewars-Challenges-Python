@@ -19,25 +19,38 @@ The input will always be an array.
 # Python extend() method adds all elements of iterable to end of list
 # Syntax: list.extend(iterable)
 
+# def deep_count(a):
+#     lst = []
+#     if not a:
+#         return 0
+#     else:
+#         for el in a:
+#             if isinstance(el, list):
+#                 lst.extend(deep_count(el))
+#             else:
+#                 lst.append(el)
+#
+a = [1,2,[3,4],5]
 def deep_count(a):
-    lst = []
-    if not a:
-        return 0
-    else:
-        for el in a:
-            if isinstance(el, list):
-                lst.extend(deep_count(el))
-            else:
-                lst.append(el)
-        return len(lst)
+    # if not a:
+    #     return 0
+    # else:
+    #     # return a + deep_count(a-1)
+    #     if type(a[0]) is not list:
+    #         print(a[0])
+    #         return 1 + deep_count(a[1:])
+    #     else:
+    #         return deep_count(a[0])
 
-print(deep_count([]))
+    return [1 for x in a]
+print(deep_count(a))
+# print(deep_count([]))
 # # 0
-print(deep_count([1, 2, 3]))
+# print(deep_count([1, 2, 3]))
 # # 3
 print(deep_count(["x", "y", ["z"]]))
-# 4
-print(deep_count([1, 2, [3, 4, [5]]]))
-# 7
-# print(deep_count([[[[[[[[[]]]]]]]]]))
-# 8
+# # 4
+# print(deep_count([1, 2, [3, 4, [5]]]))
+# # 7
+# # print(deep_count([[[[[[[[[]]]]]]]]]))
+# # 8
